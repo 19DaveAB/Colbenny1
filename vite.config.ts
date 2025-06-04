@@ -1,4 +1,10 @@
 import { defineConfig } from "vite";
+export default defineConfig({
+  root: "client",        // if your index.html is inside /client
+  build: {
+    outDir: "../dist",   // this outputs build files outside /client
+  },
+})
 import react from "@vitejs/plugin-react";
 import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
